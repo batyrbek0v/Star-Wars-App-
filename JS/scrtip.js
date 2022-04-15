@@ -36,7 +36,7 @@ function cardTemplate(base) {
     const template = base.map(({url,name,}) => `
         <div class="card">
             <div class="card_title">
-                <h1>${name}</h1>
+                <h2>${name}</h2>
             </div>
             <div class="card_image">
                 <img src="https://cdn.worldvectorlogo.com/logos/star-wars-2.svg">
@@ -56,7 +56,7 @@ function moreInfo(url) {
         $wrapper.innerHTML = `
             <div class="more_wrapper">
                 <div class="wrapper_header">
-                    <h1>${cb.name}</h1>
+                    <h2>${cb.name}</h2>
                 </div>
                 <div class="wrapper_list">
                     <ul class="list">
@@ -141,3 +141,31 @@ var swiper = new Swiper(".mySwiper", {
     mousewheel: true,
     keyboard: true,
 });
+
+
+
+
+
+
+
+
+
+let byline = document.getElementById('byline'); 
+bylineText = byline.innerHTML;                   
+bylineArr = bylineText.split('');               
+byline.innerHTML = '';                       
+
+
+let span;      
+let letter;
+
+for(i=0;i<bylineArr.length;i++){        
+  span = document.createElement("span");  
+  letter = document.createTextNode(bylineArr[i]);
+  if(bylineArr[i] == ' ') {                   
+    byline.appendChild(letter);         
+  } else {
+    span.appendChild(letter);      
+    byline.appendChild(span);  
+  }
+}
