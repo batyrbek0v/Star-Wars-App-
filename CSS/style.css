@@ -27,6 +27,7 @@ body{
     height: 40px;
     display: flex;
     justify-content: center;
+    align-items: center;
     background-color: #FFA701;
     color: aliceblue;
     border-radius: 4px;
@@ -126,29 +127,44 @@ body{
     background-color:#3b3f46 ;
 }
 
+
+        /* PAGINATION */
+
 .pagination{
     width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 10px;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
 }
 .pagination button{
-    width: 100px;
-    height: 30px;
+    width: 80px;
+    height: 35px;
     cursor: pointer;
-    background-color: crimson;
-    border: none;
-    color: white;
+    background-color: #1e2328;
+    border: 2px solid #FFA701;
+    color: #FFA701;
     font-weight: bold;
 }
+.pages{
+    color: aliceblue;
+    font-weight: bold;
+    padding: 2rem;
 
+}
+.next, .prev{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .next:disabled , .prev:disabled{
     opacity: 0.6;
     pointer-events: none;
     cursor: default;
 }
 
+        /* PAGINATION - END */
 
 .swiper {
   width: 100%;
